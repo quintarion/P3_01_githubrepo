@@ -1,0 +1,34 @@
+@mixin theme($light-theme: true) {
+    @if $light-theme {
+        background: lighten($--color-bg, 100%);
+        color: darken($--color-text, 100%);
+    }
+}
+
+#light {
+    @include theme($light-theme: false); 
+}
+
+#light:active:target {
+    @if ("$light-theme" == true) {
+        @include theme($light-theme: false); 
+    }
+    @else {
+        @include theme($light-theme: true); 
+    }
+}
+
+
+// THIS IS THE DARK MODE OVERLAY WE WILL TOGGLE WHEN THE CHECKBOX IS CHECKED //  
+.dark-mode {
+  @include theme($light-theme: false);
+}
+
+#switch:checked ~ .dark-mode {
+  @include theme($light-theme: true);
+}
+  
+// THIS LINE TOGGLES THE DARK MODE OVERLAY WHEN THE CHECKBOX IS CHECKED //
+input[type=checkbox]:checked ~ .dark-mode {
+  @include theme($light-theme: true);
+}

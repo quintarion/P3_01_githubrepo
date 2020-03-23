@@ -1,0 +1,20 @@
+// COLORS //
+$--color-base: #fff;
+$--color-light: #e8e3de;
+$--color-bg: #292922;
+$--color-dark: #231d1e;
+$--color-tonic: #e5461f;
+$--color-shadow: #777;
+$--color-active: #302AE6;
+$--color-blue: #3e436b;
+$--color-text: #b1b1b1;
+ 
+// FONTS //
+@import url('https://fonts.googleapis.com/css?family=Oswald|Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif|Liu+Jian+Mao+Cao&display=swap');
+
+$--font-main: 'Space Mono',monospace;
+$--font-secondary: 'Oswald',sans-serif;
+$--font-third: 'Bree Serif', serif;
+$--font-fourth: 'Liu Jian Mao Cao', cursive;

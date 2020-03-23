@@ -1,0 +1,77 @@
+@mixin custom-title-line {
+    height: 3px;
+    background:#B4B89F;;
+    border-bottom: black;
+    //margin-bottom: 8em;
+    position: relative;
+}
+
+@mixin custom-title {
+    background-color: #212121;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    margin-left: -150px;
+    width: 300px;
+    text-align: center;
+    display: block;
+    color: #e8e3de;
+    text-transform: uppercase;
+    //font-size: 14px;
+    //font-size: 1.4rem;
+    font-weight: normal;
+    letter-spacing: 1px;
+    padding: 0px;
+}
+
+// PROGRESS BAR \\
+
+@mixin bar {
+    //background: darken($--color-first, 10%);
+    background: #cccbc9;
+    width: 800px;
+    height: 24px;
+    border-radius: 2px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+@mixin progress-bar($width) {
+    width: $width;
+    height: 24px;
+    border-radius: 2px;
+    background: url('../public/img/grey.jpg');
+    // background: -webkit-linear-gradient(to right, $--color-third, $--color-second);
+    // background: -o-linear-gradient(to right, $--color-third, $--color-second);
+    // background: -moz-linear-gradient(to right, $--color-third, $--color-second);
+    // background: -ms-linear-gradient(to right, $--color-third, $--color-second);
+    // background: linear-gradient(to right, $--color-third, $--color-second);
+}
+
+@mixin big-title($color) {
+    display: block;
+    //font-size: 1.5em;
+    //margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    letter-spacing: .3px;
+    font-size: 7.5em;
+    //text-transform: capitalize;
+    font-family: $--font-secondary;
+}
+
+@mixin vertical {
+    //writing-mode:tb-rl;
+    -webkit-transform:rotate(90deg);
+    -moz-transform:rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform:rotate(90deg);
+    transform: rotate(90deg);
+    // white-space:nowrap;
+    // display:block;
+    // bottom:0;
+    // width:20px;
+    // height:20px;
+}

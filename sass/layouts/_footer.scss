@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+.footer {
+    align-items: baseline;
+    display: flex;
+    justify-content: space-between;
+    margin: 1em 2em;
+
+    ul {
+        display: flex;
+        flex-flow: row nowrap;
+
+        li {
+            display: inline-block;
+            flex-basis: 80%;
+            margin: 0 12px;
+        }
+    }
+}
+
+// MEDIA QUERIES \\
+@media screen and (max-width: 670px) {
+    .footer {
+        &__page {
+            display: none !important;
+        }
+    }
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <!-- GENERAL INFO -->
+    <meta charset="UTF-8">
+    <meta name="description" content="The portfolio of a Web developer">
+
+    <!-- LINKS TO CSS FILE ("STYLESHEET") AND SITE ICON -->
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <!-- DEVICES & BROWSERS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Home|Front End Developer</title>
+</head>
+    <body class="dark-mode">
+        <!-- id="light"  -->
+
+        <!--BESIDE-->
+        <div class="resume">
+            <hr resume__line>
+            <i class="fas fa-adjust"><input type="checkbox" id="switch"></i>
+            <label for="switch"></label>
+        </div>
+
+        <div class="page dark-mode">
+            <header class="site-header header">
+                <nav class="nav">
+                    <a href="#" class="nav__brand">
+                        <h1 class="header__title" id="top">qu<span class="dot">.</span>tana</h1>
+                    </a>
+                    <input type="checkbox" id="checkbox-dropdown">
+                    <label for="checkbox-dropdown" class="burger-menu">
+                      <i class="fas fa-bars"></i>
+                    </label>
+                    <ul class="nav__items">
+                        <li class="nav__link nav__link--page"><a href="index.html">home</a></li>
+                        <li class="nav__link nav__link--page"><a href="about.html">about</a></li>
+                        <li class="nav__link nav__link--page"><a href="portfolio.html">portfolio</a></li>
+                        <li class="nav__link"><a href="https://github.com/quintarion" target="_blank"><i class="fab fa-github"></i></a></li>
+                        <li class="nav__link"><a href="https://codepen.io/" target="_blank"><i class="fab fa-codepen"></i></a></li>
+                        <li class="nav__link"><a href="contact.html" class="nav__link--active"><i class="far fa-envelope"></i></a></li>
+                        <li class="nav__link"><a href="https://www.linkedin.com/in/marion-q-448010184" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                  </nav>
+            </header>
+
+            <!--Main page content-->
+            <main class="site-content">
+            <!--HOME SIDE-->
+            <section class="home">
+                <article class="home__intro">
+                    <div class="home__intro--dreamer">
+                        <h2>dreamer</h2>
+                        <img src="./public/img/dreaming.jpg" alt=""/>
+                    </div>
+                    <div class="home__intro--coder">
+                        <h2 class="home__title--left">coder</h2>
+                        <img src="./public/img/coding.jpg" alt=""/>
+                        <i class="fas fa-chevron-right next"></i>
+                    </div>
+                </article>
+                <article class="home__work">
+                    <div class="home__work--title">
+                        <h3>some of my projects</h3>
+                    </div>
+                    <div class="home__work--img">
+                        <figure>
+                            <img src="public/img/computer.jpg" alt="" title=""/>
+                            <figcaption>title&nbsp;<i class="fab fa-git-square"></i></figcaption>
+                        </figure>
+                        <figure>
+                            <img src="public/img/computer.jpg" alt="" title=""/>
+                            <figcaption>title&nbsp;<i class="fab fa-git-square"></i></figcaption>
+                        </figure>
+                        <figure>
+                            <img src="public/img/computer.jpg" alt="" title=""/>
+                            <figcaption>title&nbsp;<i class="fab fa-git-square"></i></figcaption>
+                        </figure>
+                    </div>
+                    <a href="portfolio.html" class="home__work--more"><i class="fas fa-ellipsis-h"></i></a>
+                </article>
+                <a href="#top" class="top"><i class="fas fa-chevron-up"></i></a>
+            </section>
+            </main>
+    
+            <footer class="site-footer footer">
+                <p>©QU.NTANA 2020</p>
+                <ul>
+                    <li class="footer__link footer__link--activ">home</li>
+                    <li class="footer__link"><a href="about.html">about</a></li>
+                    <li class="footer__link"><a href="portfolio.html">portfolio</a></li>
+                </ul>
+                <ul>
+                    <li class="footer__social"><a href="#"><i class="fab fa-github"></i></a></li>
+                    <li class="footer__social"><a href="#"><i class="fab fa-codepen"></i></a></li>
+                    <li class="footer__social"><a href="contact.html"><i class="far fa-envelope"></i></a></li>
+                    <li class="footer__social"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+            </footer>
+        </div>
+        <!--IMPORT ICONS-->
+        <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+    </body>
+</html>

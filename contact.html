@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <!-- GENERAL INFO -->
+    <meta charset="UTF-8">
+    <meta name="description" content="The portfolio of a Web developer">
+
+    <!-- LINKS TO CSS FILE ("STYLESHEET") AND SITE ICON -->
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <!-- DEVICES & BROWSERS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Contact|Qu.ntana</title>
+</head>
+    <body class="dark-mode">
+        <!-- id="light"  -->
+
+         <!--BESIDE-->
+         <div class="resume">
+            <hr resume__line>
+            <i class="fas fa-adjust"><input type="checkbox" id="switch"></i>
+            <label for="switch"></label>
+        </div>
+
+        <div class="page dark-mode">
+            <header class="site-header header">
+                <nav class="nav">
+                    <a href="#" class="nav__brand">
+                        <h1 class="header__title" id="top">qu<span class="dot">.</span>tana</h1>
+                    </a>
+                    <input type="checkbox" id="checkbox-dropdown">
+                    <label for="checkbox-dropdown" class="burger-menu">
+                      <i class="fas fa-bars"></i>
+                    </label>
+                    <ul class="nav__items">
+                        <li class="nav__link nav__link--page"><a href="index.html">home</a></li>
+                        <li class="nav__link nav__link--page"><a href="about.html">about</a></li>
+                        <li class="nav__link nav__link--page"><a href="portfolio.html">portfolio</a></li>
+                        <li class="nav__link"><a href="https://github.com/quintarion" target="_blank"><i class="fab fa-github"></i></a></li>
+                        <li class="nav__link"><a href="https://codepen.io/" target="_blank"><i class="fab fa-codepen"></i></a></li>
+                        <li class="nav__link"><a href="contact.html" class="nav__link--active"><i class="far fa-envelope"></i></a></li>
+                        <li class="nav__link"><a href="https://www.linkedin.com/in/marion-q-448010184" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </nav>
+        </header>
+
+        <!--Main page content-->
+            <main class="site-content">
+
+            <!--FORM CONTACT-->
+            <section id="contact" class="form">
+                <form action="" method="get" class="form form__field--wrapper">
+                    
+                    <label for="name" class="form__field--item">name</label>
+                    <input type="text" name="name" id="name" class="form__field--placeholder" required/>
+              
+                    <label for="email" class="form__field--item">email</label>
+                    <input type="email" name="email" id="email" class="form__field--placeholder" required/>
+                    
+                    <label for="email" class="form__field--item">message</label>
+                    <textarea type="email" name="email" id="email" class="form__field--placeholder" required></textarea>
+                    
+                    <button type="submit" class="form__field--item" value="SEND">SEND</button>
+    
+                  </form>
+            </section>
+
+            </main>
+            <footer class="site-footer footer">
+                <p>©QU.NTANA 2020</p>
+                <ul>
+                    <li class="footer__link"><a href="index.html">home</a></li>
+                    <li class="footer__link"><a href="about.html">about</a></li>
+                    <li class="footer__link"><a href="portfolio.html">portfolio</a></li>
+                </ul>
+                <ul>
+                    <li class="footer__social"><a href="#"><i class="fab fa-github"></i></a></li>
+                    <li class="footer__social"><a href="#"><i class="fab fa-codepen"></i></a></li>
+                    <li class="footer__social"><i class="far fa-envelope"></i></li>
+                    <li class="footer__social"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+            </footer>
+        </div>
+        <!--IMPORT ICONS-->
+        <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+    </body>
+</html>

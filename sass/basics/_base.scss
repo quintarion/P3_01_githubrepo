@@ -1,0 +1,111 @@
+@import "../utils/variable";
+@import "../utils/function";
+@import "../utils/mixin";
+@import "../utils/placeholder";
+@import "../layouts/theme";
+
+// PLACE THE FOOTER AT THE BOTTOM OF THE PAGE \\
+body {
+	margin: 0;
+}
+
+.site-content {
+	flex: 1;
+}
+
+.page {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	min-height: 100vh;
+}
+// END \\
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+a:active {
+	color: inherit;
+}
+
+body {
+	box-sizing: border-box;
+	background-color: $--color-bg;
+	color: $--color-text;
+	font-family: $--font-main;
+}
+
+h1, h2 {
+	font-family: $--font-secondary;
+}
+
+html {
+	font-size: 100%;
+	scroll-behavior: smooth;
+}
+
+ul li {
+	list-style-type: none;
+}
+
+// BESIDE \\
+.resume {
+	position: fixed;
+	right: 0;
+	top: 50vh;
+	text-align: center;
+	transform: translateY(-50%);
+	z-index: 2;
+	
+	a {
+		display: block;
+	}
+
+	&__line {
+		background-color: $--color-text;
+		height: 3px;
+		width: 20px;
+		padding:0 5px;
+	}
+	
+	&__logo  {
+		font-size: xx-large;
+	}
+}
+
+// BUTTON GO TOP \\
+.top {
+	// CENTER BUTTON \\
+	display: block;
+	text-align: center;
+	margin : 2em auto 0 auto;
+
+	// HOVER ANIMATION \\
+    transform: scale(1);
+    transition-property: transform;
+	transition-duration: 1000ms;
+
+	i {
+		font-size: 24px;
+	}
+	
+	&:hover {
+		transform: scale(1.5);
+	}
+}
+
+@media screen and(max-width: 975px) {
+	.top {
+		display: none;
+	}
+}

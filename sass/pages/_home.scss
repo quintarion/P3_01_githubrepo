@@ -1,0 +1,243 @@
+@import "../utils/mixin";
+@import "../utils/variable";
+
+.home {
+    display: flex;
+    flex-flow: column nowrap;
+
+    &__intro {
+        display: grid;
+        grid-template:  40vw / 50vw 50vw;
+        padding: 4.5em 0;
+
+        h2 {
+            color: $--color-base;
+            font-size: 7.5em;
+            font-weight: bold;
+            letter-spacing: .3px;
+            text-transform: capitalize;
+        }
+
+        ul li {
+            padding: 0 2em;
+        }
+
+        &--dreamer {
+            position: relative;
+
+            // KEYFRAMES ANIMATION //
+            -webkit-animation: slide-left 5s normal; 
+            -moz-animation:    slide-left 5s forwards; 
+            -o-animation:      slide-left 5s normal; 
+            animation:         slide-left 5s normal;
+    
+            h2 {
+                animation: left-content 15s;
+                color: $--color-dark;
+                margin-top: -.5em;
+                position: absolute;
+            }
+    
+            img {
+                object-fit: cover;
+                height: 45vw;
+                width: 50vw;
+            }
+        }
+
+        &--coder {
+            position: relative;
+
+            .next {
+                display: none;
+            }
+
+            h2 {
+                animation: left-content 15s;
+                color: $--color-light;
+                margin-left: 100%;
+                margin-top: -.5em;
+                position: absolute;
+                right: 0;
+                text-align: right;
+                transform: scaleX(-1);
+            }
+    
+            img {
+                object-fit: cover;
+                height: 45vw;
+                width: 50vw;
+            }
+        
+            // KEYFRAMES ANIMATION //
+            -webkit-animation: slide-right 5s reverse backwards; /* Safari 4+ */
+            -moz-animation:    slide-right 5s reverse backwards; /* Fx 5+ */
+            -o-animation:      slide-right 5s reverse backwards; /* Opera 12+ */
+            animation:         slide-right 5s reverse backwards; /* IE 10+, Fx 29+ */
+        }
+    }
+
+
+    &__work { 
+        height: auto;  
+        padding: 3em;
+        
+        &--img {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+
+                figure {
+                    color: lighten($color: $--color-blue, $amount: 30%);
+                    font-size: x-large;
+                    position: relative;
+                    text-align: center;
+                    
+                    img {
+                        padding: 2em;
+                        opacity: 0.2;
+                        width: 30vw;
+                    }
+
+                    img:hover {
+                        opacity: 1;
+                    }
+
+                    // BOTTOM RIGHT TEXT //
+                    figcaption {
+                        bottom: 2.5em;
+                        position: absolute;
+                        right: 2.5em;
+                    }
+                }
+
+        }
+
+        &--more {
+            color: $--color-blue;
+            font-size: 40px;
+
+	        // CENTER BUTTON //
+            display: block;
+            text-align: center;
+	        margin : 0 auto;
+        }
+
+        &--title {
+            @include custom-title-line;
+    
+            h3 {
+              @include custom-title;
+            }
+        } 
+    }
+}
+
+// ANIMATION //
+
+// SLIDE-LEFT //
+@-webkit-keyframes slide-left {
+    0%   {transform: translateX(-100%)};
+    100% {transform: translateX(0)}
+}
+@-moz-keyframes slide-left {
+    0%   {transform: translateX(-100%)};
+    100% {transform: translateX(0)}
+}
+@-o-keyframes slide-left {
+    0%   {transform: translateX(-100%)};
+    100% {transform: translateX(0)}
+}
+@keyframes slide-left {
+    0%   {transform: translateX(-100%)};
+    100% {transform: translateX(0)}
+}
+
+// LEFT-CONTENT //
+@keyframes left-content {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+// SLIDE-RIGHT //
+@-webkit-keyframes slide-right {
+    0%   {transform: translateX(0)};
+    100% {transform: translateX(100%)}
+}
+@-moz-keyframes slide-right {
+    0%   {transform: translateX(0)};
+    100% {transform: translateX(100%)}
+}
+@-o-keyframes slide-right {
+    0%   {transform: translateX(0)};
+    100% {transform: translateX(100%)}
+}
+@keyframes slide-right {
+    0%   {transform: translateX(0)};
+    100% {transform: translateX(100%)}
+}
+
+// RIGHT CONTENT //
+@keyframes left-content {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+// SHAKE ANIMATION //
+@keyframes shake {
+    10%, 90% {
+        transform: translate3d(-1px,-50%,0);
+    }
+    20%, 80% {
+        transform: translate3d(2px,-50%,0);
+    }
+    30%, 50%, 70% {
+        transform: translate3d(-3px,-50%,0);
+    }
+    40%, 60% {
+        transform: translate3d(3px,-50%,0);
+    }
+}
+
+// MEDIA QUERIES //
+@media screen and (max-width:799px) {
+    .home {
+        &__intro {  
+            flex-direction: column;
+            height: 100vh;
+            padding: 3em 0 0;
+            
+            &--dreamer {
+                display: none;
+            }
+
+            &--coder {
+                height: 100vh;
+                position: relative;
+                width: 100vw;
+                
+                .next {
+                    color: $--color-tonic;
+                    left: 50%;
+                    position: absolute;
+                    top: 50%;
+                }
+
+                h2 {
+                    margin-top: .1em;
+                    right: 0;
+                    position: absolute;
+                }
+
+                img {
+                    height: 90vh;
+                    width: 100vw;
+                }
+            }
+        }
+
+        &__work {
+            display: none;
+        }
+    }
+}
