@@ -26,10 +26,10 @@
             position: relative;
 
             // KEYFRAMES ANIMATION //
-            -webkit-animation: slide-left 5s normal; 
-            -moz-animation:    slide-left 5s forwards; 
-            -o-animation:      slide-left 5s normal; 
-            animation:         slide-left 5s normal;
+            -webkit-animation: slide-left 3s normal; 
+            -moz-animation:    slide-left 3s forwards; 
+            -o-animation:      slide-left 3s normal; 
+            animation:         slide-left 3s normal;
     
             h2 {
                 animation: left-content 15s;
@@ -47,10 +47,6 @@
 
         &--coder {
             position: relative;
-
-            .next {
-                display: none;
-            }
 
             h2 {
                 animation: left-content 15s;
@@ -70,10 +66,10 @@
             }
         
             // KEYFRAMES ANIMATION //
-            -webkit-animation: slide-right 5s reverse backwards; /* Safari 4+ */
-            -moz-animation:    slide-right 5s reverse backwards; /* Fx 5+ */
-            -o-animation:      slide-right 5s reverse backwards; /* Opera 12+ */
-            animation:         slide-right 5s reverse backwards; /* IE 10+, Fx 29+ */
+            -webkit-animation: slide-right 2s reverse backwards; // SAFARI //
+            -moz-animation:    slide-right 2s reverse backwards; // Fx //
+            -o-animation:      slide-right 2s reverse backwards; // OPERA //
+            animation:         slide-right 2s reverse backwards; // IE FXF //
         }
     }
 
@@ -204,7 +200,7 @@
     .home {
         &__intro {  
             flex-direction: column;
-            height: 100vh;
+            //height: 100vh;
             padding: 3em 0 0;
             
             &--dreamer {
@@ -212,26 +208,37 @@
             }
 
             &--coder {
-                height: 100vh;
+                //height: 100vh;
                 position: relative;
                 width: 100vw;
                 
                 .next {
-                    color: $--color-tonic;
-                    left: 50%;
+                    color: $--color-blue;
+                    left: 10vw;
                     position: absolute;
-                    top: 50%;
+                    top: 60vh;
+                    font-size: 3em;
+                    
+                    // ANIMATION  //
+                    -webkit-animation-delay: 1s; // Chrome, Safari, Opera //
+                    animation-delay: 1s;
+
+                    -webkit-animation: wavering 2s infinite; // SAFARI
+                    -moz-animation:    wavering 2s infinite; // FX
+                    -o-animation:      wavering 2s infinite; // OPERA
+                    animation:         wavering 2s infinite; // IE, FX
+                    
                 }
 
                 h2 {
-                    margin-top: .1em;
-                    right: 0;
+                    margin-top: 5px;
+                    right: 8px;
                     position: absolute;
                 }
 
                 img {
-                    height: 90vh;
-                    width: 100vw;
+                    height: 80vh;
+                    width: 100%;
                 }
             }
         }
@@ -241,3 +248,69 @@
         }
     }
 }
+
+// ANIMATION //
+@-webkit-keyframes wavering {
+    0% {
+        -webkit-transform: translate(0px, 0px);
+        animation-timing-function: ease-in-out;
+    }
+ 
+    50% {
+        -webkit-transform: translate(0px, 22px);
+        animation-timing-function: ease-in-out;
+    }
+ 
+    100% {
+        -webkit-transform: translate(0px, 0px);
+        animation-timing-function: ease-in-out;
+    }
+ }
+ @-moz-keyframes wavering {
+    0% {
+        transform: translate(0px, 0px);
+        animation-timing-function: ease-in-out;
+    }
+ 
+    50% {
+        transform: translate(0px, 22px);
+        animation-timing-function: ease-in-out;
+    }
+ 
+    100% {
+        transform: translate(0px, 0px);
+        animation-timing-function: ease-in-out;
+    }
+ }
+ @-o-keyframes wavering {
+    0% {
+        transform: translate(0px, 0px);
+        animation-timing-function: ease-in-out;
+    }
+ 
+    50% {
+        transform: translate(0px, 22px);
+        animation-timing-function: ease-in-out;
+    }
+ 
+    100% {
+        transform: translate(0px, 0px);
+        animation-timing-function: ease-in-out;
+    }
+ }
+@keyframes wavering {
+    0% {
+        transform: translate(0px, 0px);
+        animation-timing-function: ease-in-out;
+    }
+ 
+    50% {
+        transform: translate(0px, 22px);
+        animation-timing-function: ease-in-out;
+    }
+ 
+    100% {
+        transform: translate(0px, 0px);
+        animation-timing-function: ease-in-out;
+    }
+ }

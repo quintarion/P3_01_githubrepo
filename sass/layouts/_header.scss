@@ -4,6 +4,12 @@ header {
     display: flex;
     height: 4vw;
     justify-content: space-between;
+
+    // KEYFRAMES ANIMATION //
+    -webkit-animation: slide-down 3s normal; 
+    -moz-animation:    slide-down 3s normal; 
+    -o-animation:      slide-down 3s normal; 
+    animation:         slide-down 3s normal;
 }
 
 // MENU BURGER \\
@@ -21,6 +27,16 @@ header {
         position: relative;
         text-align: center;
         text-decoration: none;
+    }
+
+    &__network {
+
+        padding: 10vh 0 30vh;
+        border-bottom: solid 1px $--color-blue;
+    
+        li {
+            display: inline;
+        }
     }
 
     .burger-menu {
@@ -53,16 +69,16 @@ header {
         list-style: none;
         margin-right: 1rem;
         min-height: 72px; 
-        width: 100%;
+        //width: 100%;
     }
 
     &__link {
         color: $--color-text;
-        margin: 0.5rem;
+        //margin: 0.5rem;
         padding: 1rem;
         position: relative;
         text-decoration: none;
-        transition: 0.5s; 
+        transition: .5s; 
     }
 
     .nav__link--active {
@@ -116,6 +132,9 @@ header {
                 }  
             }
         }
+        .nav__link--social {
+            display: inline;
+        }
     }
 }
 
@@ -126,24 +145,26 @@ header {
 
     .burger-menu {
         display: block;
+        margin-right: 1em;
     }
 
     #checkbox-dropdown:checked ~ &__items {
-        max-height: 500px;
+        max-height: 1136px; //iPhone 5: 640×1136 pixels//
     }
 
     &__items {
         background: $--color-bg;
         display: block;
         left: 0;
-        max-height: 0px;
-        min-height: 0px;
+        min-height: 0;
+        max-height: 0;
         overflow: hidden;
         position: absolute;
         text-align: center;
         transition: max-height 0.5s;
         top: 70px;
         z-index: 100;
+        width: 100%;
     }
 
     &__link {
@@ -151,4 +172,22 @@ header {
         width: 50%;
     }
   }
+}
+
+// SLIDE-DOWN //
+@-webkit-keyframes slide-down {
+    0%   {transform: translateY(-100%)};
+    100% {transform: translateY(0)}
+}
+@-moz-keyframes slide-down {
+    0%   {transform: translateY(-100%)};
+    100% {transform: translateY(0)}
+}
+@-o-keyframes slide-down {
+    0%   {transform: translateY(-100%)};
+    100% {transform: translateY(0)}
+}
+@keyframes slide-down {
+    0%   {transform: translateY(-100%)};
+    100% {transform: translateY(0)}
 }

@@ -1,28 +1,37 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 .footer {
-    align-items: baseline;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
     margin: 1em 2em;
 
     ul {
-        display: flex;
-        flex-flow: row nowrap;
-
         li {
-            display: inline-block;
-            flex-basis: 80%;
+            display: inline;
             margin: 0 12px;
         }
     }
+
+    &__page {
+        justify-self: center;
+    }
+
+    &__network {
+        justify-self: right;
+    }
+
 }
 
 // MEDIA QUERIES \\
-@media screen and (max-width: 670px) {
+@media screen and (max-width: 875px) {
     .footer {
-        &__page {
-            display: none !important;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+
+        .footer__link {
+            display: none;
         }
     }
 }

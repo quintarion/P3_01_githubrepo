@@ -41,6 +41,7 @@ a:active {
 body {
 	box-sizing: border-box;
 	background-color: $--color-bg;
+	background: linear-gradient( to right bottom, $--color-bg 70%, lighten($--color-bg, 5%) 30%);
 	color: $--color-text;
 	font-family: $--font-main;
 }

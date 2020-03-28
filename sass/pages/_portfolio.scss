@@ -4,7 +4,7 @@
         padding: 4em 3em 3em;
 
         h3 {
-            @include big-title(color(#2C2C62));
+            @include big-title(color($--color-blue));
             margin-block-end: 0.3em;
             // KEYFRAMES ANIMATION \\
             -webkit-animation: slide-left 5s normal; /* Safari 4+ */
